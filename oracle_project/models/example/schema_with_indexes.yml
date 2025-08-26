@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: indexed_table_example
+    columns:
+      - name: id
+        description: Primary identifier
+        tests:
+          - not_null
+      - name: name
+        description: Item name
+      - name: code
+        description: Unique item code
+        tests:
+          - unique
+    
+    # Define custom post-hooks for this model
+    meta:
+      indexes:
+        - columns:
+            - id
+          type: normal
+          name: idx_{{ model.name }}_id_meta
+        - columns:
+            - name
+            - code
+          type: normal
+          name: idx_{{ model.name }}_name_code

@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: first_model
+    description: "A simple model that gets the current date from Oracle"
+    columns:
+      - name: current_date
+        description: "The current date in Oracle"
+      - name: current_user
+        description: "The current user in Oracle"
+      - name: db_name
+        description: "The Oracle database name"
+
+  - name: second_model
+    description: "A model that references the first model"
+    columns:
+      - name: current_date
+        description: "The current date from first_model"
+      - name: current_user
+        description: "The current user from first_model"
+      - name: db_name
+        description: "The Oracle database name from first_model"
+      - name: model_timestamp
+        description: "The timestamp when this model was created"
