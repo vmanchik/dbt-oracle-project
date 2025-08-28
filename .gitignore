@@ -3,6 +3,13 @@ target/
 dbt_packages/
 logs/
 .user.yml
+.dbt/profiles.yml
+env_setup.sh
+env_setup.bat
+set_oracle_env_var.bat
+.env
+local_config/*
+!local_config/README.md
 
 # Python
 __pycache__/

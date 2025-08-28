@@ -1,0 +1,17 @@
+oracle_project:
+  target: dev
+  outputs:
+    dev:
+      type: oracle
+      user: your_username
+      pass: "{{ env_var('DBT_ORACLE_PASSWORD') }}"
+      host: 10.232.113.104
+      port: 1521
+      service: DWHDB.nocccd.edu
+      database: DWHDB
+      protocol: tcp
+      schema: edw_dev
+      threads: 4
+      # Uncomment and set the following for thick mode connection if needed
+      # thick_mode: true
+      # lib_dir: /path/to/oracle/instantclient

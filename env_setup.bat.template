@@ -1,0 +1,16 @@
+@echo off
+REM This script sets up environment variables for Oracle connection
+REM Copy this file to env_setup.bat and modify as needed
+
+REM Oracle password - for current session only
+set DBT_ORACLE_PASSWORD=your_password_here
+
+REM Oracle client paths for thick mode
+set ORACLE_HOME=C:\Oracle\instantclient_19_3
+set TNS_ADMIN=%CD%\.dbt
+set PATH=%ORACLE_HOME%;%PATH%
+
+REM For permanent setting (uncomment if needed)
+REM SETX DBT_ORACLE_PASSWORD "your_password_here"
+
+echo Oracle environment variables have been set.

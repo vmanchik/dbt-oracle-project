@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# This script sets up environment variables for Oracle connection
+# Copy this file to env_setup.sh and modify as needed
+
+# Oracle password
+export DBT_ORACLE_PASSWORD="your_password_here"
+
+# Oracle client paths for thick mode
+export ORACLE_HOME="/path/to/oracle/instantclient"
+export TNS_ADMIN="$(pwd)/.dbt"
+export PATH="$ORACLE_HOME:$PATH"
+
+echo "Oracle environment variables have been set."
