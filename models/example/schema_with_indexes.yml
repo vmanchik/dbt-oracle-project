@@ -20,9 +20,9 @@ models:
         - columns:
             - id
           type: normal
-          name: idx_{{ model.name }}_id_meta
+          name: idx_indexed_table_example_id_meta
         - columns:
             - name
             - code
           type: normal
-          name: idx_{{ model.name }}_name_code
+          name: idx_indexed_table_example_name_code
