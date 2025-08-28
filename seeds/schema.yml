@@ -1,0 +1,26 @@
+version: 2
+
+seeds:
+  - name: kpi_degree_crosswalk
+    description: >
+      Crosswalk mapping between program codes, majors, and KPI degree categories
+      for Cypress College and Fullerton College.
+    columns:
+      - name: COLLEGE_CODE
+        description: Numeric code representing the college (e.g., 1=CC, 2=FC).
+        tests:
+          - not_null
+      - name: PROGRAM_CODE
+        description: Unique identifier for program.
+        tests:
+          - not_null
+      - name: PROGRAM_DESC
+        description: Program description.
+      - name: MAJOR_CODE
+        description: Code representing the major.
+      - name: MAJOR_DESC
+        description: Major description.
+      - name: KPI_DEGREE
+        description: KPI degree category for reporting.
+      - name: KPI_DIVISION
+        description: KPI division grouping.
